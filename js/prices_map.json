@@ -21,14 +21,14 @@
         },
         {
             "data": {
-                "url": "global_internet_prices.csv"
+                "url": "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/js/global_internet_prices.csv"
             },
             "transform": [
                 {
                     "lookup": "properties.NAME",
                     "from": {
                         "data": {
-                            "url": "global_internet_prices.csv"
+                            "url": "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/js/global_internet_prices.csv"
                         },
                         "key": "Country",
                         "fields": [
