@@ -23,14 +23,14 @@
         },
         {
             "data": {
-                "url": "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/data/internet%20usage.csv"
+                "url": "internet_usage.csv"
             },
             "transform": [
                 {
-                    "lookup": "id",
+                    "lookup": "properties.ADM0_A3",
                     "from": {
                         "data": {
-                            "url": "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/data/internet%20usage.csv"
+                            "url": "internet_usage.csv"
                         },
                         "key": "Code",
                         "fields": [

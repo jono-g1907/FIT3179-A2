@@ -1,4 +1,4 @@
-S.NO,Country code,Country,Continental region,NO. OF Internet Plans,Average price of 1GB (USD),Cheapest 1GB for 30 days (USD),Most expensive 1GB (USD),Average price of 1GB (USD  at the start of 2021),Average price of 1GB (USD – at start of 2020),Internet users,Population,"Avg 
+S.NO,Country code,Country,Continental region,NO. OF Internet Plans,Price,Cheapest 1GB for 30 days (USD),Most expensive 1GB (USD),Average price of 1GB (USD  at the start of 2021),Average price of 1GB (USD – at start of 2020),Internet users,Population,"Avg 
 (Mbit/s)Ookla"
 0,IL,Israel,NEAR EAST,27,0.05,0.02,20.95,0.11,0.9,"6,788,737","8,381,516",28.01
 1,KG,Kyrgyzstan,CIS (FORMER USSR),20,0.15,0.1,7.08,0.21,0.27,"2,309,235","6,304,030",16.3
@@ -231,14 +231,14 @@ S.NO,Country code,Country,Continental region,NO. OF Internet Plans,Average price
 230,SH,"Saint Helena, Ascension and Tristan da Cunha",SUB-SAHARAN AFRICA,4,39.87,38.57,51.42,52.5,6.04,"2,906","6,035",
 231,FK,Falkland Islands,SOUTH AMERICA,4,44.56,29.71,82.26,40.41,55.47,"2,881","3,234",
 232,GQ,Equatorial Guinea,SUB-SAHARAN AFRICA,4,49.67,45.16,63.22,12.78,47.39,"332,642","1,308,975",
-233,CW,Christmas Island,CARIBBEAN,,NO PROVIDERS,,,,,,,
-234,ER,Eritrea,NORTHERN AFRICA,,NO PROVIDERS,,,,,"66,402","3,452,786",
-235,KP,North Korea,CARIBBEAN,,NO PROVIDERS,,,,,,,
-236,MH,Marshall Islands,OCEANIA,,NO PROVIDERS,,,,,"20,560","58,413",
-237,PM,St. Pierre and Miquelon,CARIBBEAN,,NO PROVIDERS,,,,,,,
-238,SS,South Sudan,SUB-SAHARAN AFRICA,,NO PROVIDERS,,,,,"1,003,542","10,975,927",
-239,VA,Vatican City (Holy See),Europe,,NO PROVIDERS,,,,,,,
-240,VE,Venezuela,SOUTH AMERICA,,HYPERINFLATION,,,,,"20,564,451","28,887,118",5.68
-241,WF,Wallis and Futuna,OCEANIA,,NO PROVIDERS,,,,,"1,383","11,661",
-242,CD,Democratic Republic of the Congo,SUB-SAHARAN AFRICA,,Prices listed in non-convertible 'units',,,,,"7,011,507","84,068,091",12.08
-243,ZW,Zimbabwe,SUB-SAHARAN AFRICA,,UNRELIABLE EXCHANGE RATES,,,,,"4,472,992","14,438,802",13.99
+233,CW,Christmas Island,CARIBBEAN,,0,,,,,,,
+234,ER,Eritrea,NORTHERN AFRICA,,0,,,,,"66,402","3,452,786",
+235,KP,North Korea,CARIBBEAN,,0,,,,,,,
+236,MH,Marshall Islands,OCEANIA,,0,,,,,"20,560","58,413",
+237,PM,St. Pierre and Miquelon,CARIBBEAN,,0,,,,,,,
+238,SS,South Sudan,SUB-SAHARAN AFRICA,,0,,,,,"1,003,542","10,975,927",
+239,VA,Vatican City (Holy See),Europe,,0,,,,,,,
+240,VE,Venezuela,SOUTH AMERICA,,0,,,,,"20,564,451","28,887,118",5.68
+241,WF,Wallis and Futuna,OCEANIA,,0,,,,,"1,383","11,661",
+242,CD,Democratic Republic of the Congo,SUB-SAHARAN AFRICA,,0,,,,,"7,011,507","84,068,091",12.08
+243,ZW,Zimbabwe,SUB-SAHARAN AFRICA,,0,,,,,"4,472,992","14,438,802",13.99
