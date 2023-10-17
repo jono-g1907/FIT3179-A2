@@ -1,0 +1,9 @@
+#map {
+    height: 600px;
+    width: 800px;
+    /* additional styles */
+  }
+
+.pure-button {
+    font-size: 100%;
+}

@@ -1,0 +1,22 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A map of global internet prices.",
+    "data": {
+        "url": "global_internet_prices.csv"
+    },
+    "projection": {
+        "type": "identity",
+        "reflectY": true
+    },
+    "mark": "geoshape",
+    "encoding": {
+        "shape": {
+            "field": "geo",
+            "type": "geojson"
+        },
+        "color": {
+            "field": "Average price of 1GB (USD)",
+            "type": "quantitative"
+        }
+    }
+}

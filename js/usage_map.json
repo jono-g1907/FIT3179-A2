@@ -1,0 +1,22 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A map of global internet usage.",
+    "data": {
+        "url": "internet_usage.csv"
+    },
+    "projection": {
+        "type": "identity",
+        "reflectY": true
+    },
+    "mark": "geoshape",
+    "encoding": {
+        "shape": {
+            "field": "geo",
+            "type": "geojson"
+        },
+        "color": {
+            "field": "Internet Users(%)",
+            "type": "quantitative"
+        }
+    }
+}
