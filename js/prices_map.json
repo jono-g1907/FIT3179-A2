@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "A map of global internet prices.",
     "data": {
-        "url": "global_internet_prices.csv"
+        "url": "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/data/global%20internet%20prices.csv"
     },
     "projection": {
         "type": "identity",

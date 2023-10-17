@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "A map of global internet usage.",
     "data": {
-        "url": "internet_usage.csv"
+        "url": "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/data/internet%20usage.csv"
     },
     "projection": {
         "type": "identity",
