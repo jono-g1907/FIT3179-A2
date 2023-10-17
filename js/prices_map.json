@@ -1,22 +1,57 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "A map of global internet prices.",
-    "data": {
-        "url": "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/data/global%20internet%20prices.csv"
-    },
+    "title": "Global Internet Prices",
     "projection": {
-        "type": "identity",
-        "reflectY": true
+        "type": "equalEarth"
     },
-    "mark": "geoshape",
-    "encoding": {
-        "shape": {
-            "field": "geo",
-            "type": "geojson"
+    "layer": [
+        {
+            "data": {
+                "url": "your-topojson-file.topojson",
+                "format": {
+                    "type": "topojson",
+                    "feature": "your-feature-name"
+                }
+            },
+            "mark": {
+                "type": "geoshape",
+                "fill": "lightgray",
+                "stroke": "white"
+            }
         },
-        "color": {
-            "field": "Average price of 1GB (USD)",
-            "type": "quantitative"
+        {
+            "data": {
+                "url": "global_internet_prices.csv"
+            },
+            "transform": [
+                {
+                    "lookup": "id",
+                    "from": {
+                        "data": {
+                            "url": "global_internet_prices.csv"
+                        },
+                        "key": "Country code",
+                        "fields": [
+                            "Average price of 1GB (USD)"
+                        ]
+                    }
+                }
+            ],
+            "mark": {
+                "type": "geoshape",
+                "tooltip": {
+                    "content": "data"
+                }
+            },
+            "encoding": {
+                "color": {
+                    "field": "Average price of 1GB (USD)",
+                    "type": "quantitative",
+                    "scale": {
+                        "scheme": "blues"
+                    }
+                }
+            }
         }
-    }
+    ]
 }

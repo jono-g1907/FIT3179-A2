@@ -1,22 +1,60 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "A map of global internet usage.",
-    "data": {
-        "url": "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/data/internet%20usage.csv"
-    },
+    "title": "Internet Usage",
     "projection": {
-        "type": "identity",
-        "reflectY": true
+        "type": "equalEarth"
     },
-    "mark": "geoshape",
-    "encoding": {
-        "shape": {
-            "field": "geo",
-            "type": "geojson"
+    "layer": [
+        {
+            "data": {
+                "url": "your-topojson-file.topojson",
+                "format": {
+                    "type": "topojson",
+                    "feature": "your-feature-name"
+                }
+            },
+            "mark": {
+                "type": "geoshape",
+                "fill": "lightgray",
+                "stroke": "white"
+            }
         },
-        "color": {
-            "field": "Internet Users(%)",
-            "type": "quantitative"
+        {
+            "data": {
+                "url": "internet_usage.csv"
+            },
+            "transform": [
+                {
+                    "lookup": "id",
+                    "from": {
+                        "data": {
+                            "url": "internet_usage.csv"
+                        },
+                        "key": "Code",
+                        "fields": [
+                            "Internet Users(%)"
+                        ]
+                    }
+                },
+                {
+                    "filter": "datum.Year === 1980"
+                }
+            ],
+            "mark": {
+                "type": "geoshape",
+                "tooltip": {
+                    "content": "data"
+                }
+            },
+            "encoding": {
+                "color": {
+                    "field": "Internet Users(%)",
+                    "type": "quantitative",
+                    "scale": {
+                        "scheme": "greens"
+                    }
+                }
+            }
         }
-    }
+    ]
 }
