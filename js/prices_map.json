@@ -7,10 +7,10 @@
     "layer": [
         {
             "data": {
-                "url": "your-topojson-file.topojson",
+                "url": "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/js/ne_110m_admin_0_countries.json",
                 "format": {
                     "type": "topojson",
-                    "feature": "your-feature-name"
+                    "feature": "ne_110m_admin_0_countries"
                 }
             },
             "mark": {
@@ -21,14 +21,14 @@
         },
         {
             "data": {
-                "url": "global_internet_prices.csv"
+                "url": "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/data/global%20internet%20prices.csv"
             },
             "transform": [
                 {
                     "lookup": "id",
                     "from": {
                         "data": {
-                            "url": "global_internet_prices.csv"
+                            "url": "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/data/global%20internet%20prices.csv"
                         },
                         "key": "Country code",
                         "fields": [
