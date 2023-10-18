@@ -44,6 +44,19 @@ function renderMap() {
     .catch(error => console.error('Error fetching the spec:', error));
 }
 
+// Function to load the bar chart
+function loadNewChart() {
+  const vegaLiteSpecFile = "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/js/average_internet_prices_vega_lite_spec_csv.json";
+
+  fetch(vegaLiteSpecFile)
+    .then(response => response.json())
+    .then(spec => {
+      vegaEmbed('#newChart', spec)
+        .catch(error => console.error('Error embedding the new chart:', error));
+    });
+}
+
 // Initialize the map and description
 renderMap();
 updateDescription();  // Initialize the description as well
+loadNewChart();
