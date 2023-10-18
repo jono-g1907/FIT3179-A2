@@ -76,7 +76,7 @@
                 "field": "Internet Users(%)",
                 "type": "quantitative",
                 "scale": {"type": "linear", "scheme": "oranges"},
-                "title": "Internet Users(%)"
+                "title": "Users (%)"
               },
               "tooltip": [
                 {"field": "Entity", "type": "nominal", "title": "Country"},

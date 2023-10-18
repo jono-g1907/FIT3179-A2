@@ -67,7 +67,7 @@
                   "domain":[0,0.5,1,1.5,2,5,10,20],
                   "range": ["#FFF5EB", "#FEE6CE", "#FDD0A2", "#FDAE6B", "#FD8D3C", "#F16913", "#D94801", "#8C2D04"]
                  },
-                "title": "Price per 1GB (USD)"
+                "title": "Price (USD)"
               },
               "tooltip": [
                 {"field": "Country", "type": "nominal", "title": "Country"},
