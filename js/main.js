@@ -26,9 +26,9 @@ function renderMap() {
   let vegaLiteSpecFile = "";
 
   if (currentDataset === 'prices') {
-    vegaLiteSpecFile = "prices_map.json";
+    vegaLiteSpecFile = "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/js/prices_map.json";
   } else {
-    vegaLiteSpecFile = "usage_map.json";
+    vegaLiteSpecFile = "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/js/usage_map.json";
   }
 
   fetch(vegaLiteSpecFile)
@@ -52,7 +52,7 @@ function renderMap() {
 
       console.log("Final spec: ", spec);
       // Embed the visualization, setting its size to match the container
-      vegaEmbed('#map', spec, { "width": width, "height": height });
+      vegaEmbed('#map', spec, { "width": width, "height": height});
     });
 }
 

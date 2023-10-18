@@ -1,62 +1,47 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "height":800,
-    "width":600,
-    "title": "Internet Usage",
+    "title": "COVID-19 Active Cases (10 Oct 2020)",
+    "width": 800,
+    "height": 400,
     "projection": {
-        "type": "equalEarth"
+        "type": "equalEarth",
+        "scale": 150
     },
-    "layer": [
+    "data": {
+        "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+    },
+    "transform": [
         {
+        "lookup": "properties.NAME",
+        "from": {
             "data": {
-                "url": "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/js/ne_110m_admin_0_countries.json",
-                "format": {
-                    "type": "topojson",
-                    "feature": "ne_110m_admin_0_countries"
-                }
+                "url": "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/data/internet_usage.csv"
             },
-            "mark": {
-                "type": "geoshape",
-                "fill": "lightgray",
-                "stroke": "white"
+            "key": "Entity",
+            "fields": ["Price"]
+        }
+        }
+    ],
+    "mark": {"type": "geoshape"},
+    "encoding": {
+        "color": {
+            "field": "Price",
+            "type": "quantitative",
+            "legend":{
+                "title": "Price per 1GB (USD)"
             }
         },
-        {
-            "data": {
-                "url": "internet_usage.csv"
+        "tooltip": [
+            {
+                "field": "properties.NAME", 
+                "type": "nominal", 
+                "title": "Country"
             },
-            "transform": [
-                {
-                    "lookup": "properties.ADM0_A3",
-                    "from": {
-                        "data": {
-                            "url": "internet_usage.csv"
-                        },
-                        "key": "Code",
-                        "fields": [
-                            "Internet Users(%)"
-                        ]
-                    }
-                },
-                {
-                    "filter": "datum.Year === 1980"
-                }
-            ],
-            "mark": {
-                "type": "geoshape",
-                "tooltip": {
-                    "content": "data"
-                }
-            },
-            "encoding": {
-                "color": {
-                    "field": "Internet Users(%)",
-                    "type": "quantitative",
-                    "scale": {
-                        "scheme": "greens"
-                    }
-                }
+            {
+                "field": "Price", 
+                "type": "quantitative"
             }
-        }
-    ]
+        ]
+    }
 }

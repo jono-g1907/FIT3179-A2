@@ -1,9 +1,14 @@
 #map {
-    height: 450px;
+    height: 300px;
     width: 600px;
-    align-items: center;
-  }
+    }
 
+#customColumn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
 .pure-button {
     font-size: 100%;
 }
