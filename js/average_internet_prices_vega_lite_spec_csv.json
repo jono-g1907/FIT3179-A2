@@ -1,0 +1,31 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Distribution of Average Internet Prices (1GB) for 2021",
+  "data": {
+    "url": "average_internet_prices_vega_data.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Average price of 1GB (USD  at the start of 2021)",
+      "type": "quantitative",
+      "bin": {
+        "maxbins": 30
+      },
+      "title": "Average Price of 1GB (USD)"
+    },
+    "y": {
+      "aggregate": "count",
+      "type": "quantitative",
+      "title": "Frequency"
+    }
+  },
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    },
+    "axis": {
+      "grid": false
+    }
+  }
+}

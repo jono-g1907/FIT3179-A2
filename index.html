@@ -1,58 +1,44 @@
 <!DOCTYPE html>
-
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Internet Usage</title>
+    <!-- Load Vega & Vega-Lite -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-
-        <title>Internet Usage</title>
-        
-        <!-- Load Vega & Vega-Lite -->
-        <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
-        
-        <!-- Pure CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
-        
-        <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
-
-    </head>
-
-    <body> 
-        <!-- Title -->
-        <div class="title-section">
-            <h1>The Global Rise of the Internet</h1>
-        </div>
-
-    <div class="outer-container">
-        <div class="pure-g">
-            <div class="pure-u-1-2">
-                <!-- wrapper div -->
-                <div class="map-container">
-                    <!-- Map -->
-                    <div id="map">
-                    </div>
-                    <!-- Buttons moved here -->
-                    <div class="button-container">
-                        <button onclick="switchDataset('prices')" class="pure-button">Global Internet Prices</button>
-                        <button onclick="switchDataset('usage')" class="pure-button">Internet Usage</button>
-                    </div>
-                    <!-- End of Buttons -->
-                </div>
-                <!-- End of new wrapper div -->
-            </div>
-            <div class="pure-u-2-3">
-                <!-- Charts will go here -->
-                <div id="chart1">
-                </div>
-                <div id="chart2">
-                </div>
-            </div>
-        </div>
+  <body>
+    <!-- Title -->
+    <div class="title-section">
+      <h1>The Global Rise of the Internet</h1>
     </div>
-        
-        <script src="js/main.js"></script>
-    </body>
+    <!-- Main Content -->
+    <div class="outer-container">
+      <div class="map-section">
+        <div class="map-container">
+          <div id="map"></div>
+          <div class="button-container">
+            <button onclick="switchDataset('prices')">Global Internet Prices</button>
+            <button onclick="switchDataset('usage')">Internet Usage</button>
+            <button onclick="switchDataset('history')">Analysis</button>
+          </div>
+            <!-- Paragraphs -->
+            <p class="map-description" id="prices-description" style="display: none;">The Global Internet Prices data reveals a notable disparity in the cost of internet access across countries, with prices for 1GB of data ranging from as low as $0 to as high as $49.67. The distribution of these prices is positively skewed, indicating that most countries offer relatively affordable internet, but there are outliers with exceptionally high prices. Interestingly, the data suggests a negative correlation between the number of internet plans available in a country and the average price, hinting that increased competition could lead to more affordable options. However, average internet speed doesn't show a strong correlation with price, suggesting that higher costs do not necessarily guarantee faster internet. Overall, the data provides valuable insights into the global landscape of internet affordability and accessibility.</p>
+            <p class="map-description" id="usage-description" style="display: none;">The trend of global internet usage from 1980 to 2020 paints a compelling narrative of technological adoption. Starting from virtually zero usage in the early 1980s, the internet has seen an explosive growth in adoption rates over the past four decades. The data shows that up until the mid-1990s, the internet was largely an academic and military network with minimal public accessibility. However, the rate of adoption began to skyrocket in the late '90s and 2000s, transforming the internet into an indispensable tool for communication, information, and commerce. By 2016, the global average internet usage reached approximately 50%, and despite some fluctuations, it has remained around that mark through 2020. This trend underscores the internet's transformation from a niche technology into a global utility, though it also highlights that about half of the world's population still remains unconnected.</p>
+            <p class="map-description" id="history-description" style="display: none;"> The disparity in internet prices across countries could have a direct impact on the rate of internet adoption, as seen in the Internet Usage data. While the global average of internet users has reached approximately 50% by 2020, the affordability of internet access remains a critical factor in bridging the digital divide. Countries with higher internet costs could face challenges in expanding internet access to their entire population, especially in low-income or rural areas. On the other hand, countries with more affordable internet options are likely to see higher adoption rates, provided other infrastructural and educational support systems are in place. The negative correlation between the number of internet plans and average prices also suggests that increasing market competition could be a viable strategy for boosting internet adoption rates. Therefore, understanding the pricing landscape is crucial for policymakers and organizations aiming to increase internet accessibility and usage globally.</p>
+
+        </div>
+      </div>
+      <div class="chart-section">
+        <div id="chart1"></div>
+        <div id="chart2"></div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+  
 </html>

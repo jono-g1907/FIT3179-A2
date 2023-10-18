@@ -5,6 +5,19 @@ let currentDataset = 'prices';
 function switchDataset(dataset) {
   currentDataset = dataset;
   renderMap();
+  updateDescription();  // Add this line to update the description
+}
+
+// Function to update the paragraph description based on the current dataset
+function updateDescription() {
+  // Hide all descriptions
+  document.getElementById('prices-description').style.display = 'none';
+  document.getElementById('usage-description').style.display = 'none';
+  document.getElementById('history-description').style.display = 'none';  // New Line
+
+  
+  // Show the description corresponding to the current dataset
+  document.getElementById(currentDataset + '-description').style.display = 'block';
 }
 
 // Function to render the map based on current dataset
@@ -31,5 +44,6 @@ function renderMap() {
     .catch(error => console.error('Error fetching the spec:', error));
 }
 
-// Initialize the map
+// Initialize the map and description
 renderMap();
+updateDescription();  // Initialize the description as well
