@@ -5,7 +5,7 @@ let currentDataset = 'prices';
 function switchDataset(dataset) {
   currentDataset = dataset;
   renderMap();
-  updateDescription();  // Add this line to update the description
+  updateDescription();  // update the description
 }
 
 // Function to update the paragraph description based on the current dataset
@@ -13,7 +13,7 @@ function updateDescription() {
   // Hide all descriptions
   document.getElementById('prices-description').style.display = 'none';
   document.getElementById('usage-description').style.display = 'none';
-  document.getElementById('history-description').style.display = 'none';  // New Line
+  document.getElementById('history-description').style.display = 'none';
 
   
   // Show the description corresponding to the current dataset
@@ -60,5 +60,5 @@ function loadNewChart() {
 
 // Initialize the map and description
 renderMap();
-updateDescription();  // Initialize the description as well
+updateDescription();  // Initialize the description
 loadNewChart();

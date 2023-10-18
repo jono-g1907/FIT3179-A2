@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Internet Usage</title>
-    <!-- Load Vega & Vega-Lite -->
+    <!-- Load Vega-Lite -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
@@ -44,18 +44,46 @@
         </div>
       </div>
 
-      <!-- New Chart and Paragraphs Section -->
+      <!-- Chart and Paragraphs Section -->
       <div class="chart2-section">
         <div class="chart2-container">
           <div class="chart2-content">
-            <div id="bar_chart"></div> <!-- Container for the new chart -->
-            <p class="chart2-description" id="chart2-description">
-              The distribution of the average price of 1GB of data across various countries reveals that the majority of countries have data prices clustered in the lower range, specifically between $0 and $5 USD. This suggests that affordable internet access is relatively widespread on a global scale. However, it's important to note that there are outliers where the average price for 1GB exceeds $5, indicating significant disparities in data costs. These outliers could represent regions where internet access is either limited, heavily taxed, or monopolized, leading to higher prices. Additionally, the presence of missing data in 13 cases suggests that there may be countries for which pricing information is either not readily available or not applicable, further complicating the global landscape of internet pricing. Overall, while internet data is generally affordable, there exist regions where it is disproportionately expensive, warranting further investigation..
-            </p>
+            <div id="bar_chart"></div> <!-- Container for the bar chart -->
+            <p class="chart2-description" id="chart2-description">The distribution of the average price of 1GB of data across various countries reveals that the majority of countries have data prices clustered in the lower range, specifically between $0 and $5 USD. This suggests that affordable internet access is relatively widespread on a global scale. However, it's important to note that there are outliers where the average price for 1GB exceeds $5, indicating significant disparities in data costs. These outliers could represent regions where internet access is either limited, heavily taxed, or monopolized, leading to higher prices. Additionally, the presence of missing data in 13 cases suggests that there may be countries for which pricing information is either not readily available or not applicable, further complicating the global landscape of internet pricing. Overall, while internet data is generally affordable, there exist regions where it is disproportionately expensive, warranting further investigation..</p>
+          </div>
+
+          <div class="additional-charts">
+            <div id="scatter_plot1"></div> <!-- Container for the first scatter plot -->
+            <div id="scatter_plot2"></div> <!-- Container for the second scatter plot -->
+          </div>
+          <div class="additional-description">
+            <p>The scatter plots provide a visual representation of the relationships between selected variables:</p>
+            <ol>
+              <li>
+                Average Price of 1GB vs Most Expensive 1GB:
+                <ul>
+                  <li>As the average price of 1GB increases, the most expensive 1GB also tends to increase. This confirms the strong positive correlation of 0.92 between these variables.</li>
+                </ul>
+              </li>
+              <li>
+                Average Price of 1GB vs Cheapest 1GB for 30 Days:
+                <ul>
+                  <li>There is a moderate positive correlation, as indicated by the clustering of points towards the lower end of the price range. This confirms the moderate positive correlation of 0.57 between these variables.</li>
+                </ul>
+              </li>
+            </ol>
+            <p>These relationships suggest that countries with higher average prices for 1GB of data are also likely to have higher prices for both the cheapest and most expensive 1GB plans.</p>
+          </div>
+      </div>
+      
+      <!-- Bottom Content Section -->
+      <div class="bottom-section">
+        <div class="new-bottom-section">
+          <div class="bottom-description" id="newBottom-description">
+            <p id="bottom-text">Visualisation created by Jonathan Gan <br>Data sourced from Kaggle.com</p>
           </div>
         </div>
       </div>
-
 
     </div>
     <script src="js/main.js"></script>
@@ -67,5 +95,16 @@
     }).catch(console.error);
   </script>
   
-  
+  <script type="text/javascript">
+    var spec2 = "js/most_expensive.json";
+    vegaEmbed('#scatter_plot1', spec2).then(function (result) {
+    }).catch(console.error);
+  </script>
+
+  <script type="text/javascript">
+    var spec2 = "js/cheapest_price.json";
+    vegaEmbed('#scatter_plot2', spec2).then(function (result) {
+    }).catch(console.error);
+  </script>
+
 </html>

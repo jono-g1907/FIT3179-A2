@@ -15,11 +15,10 @@ body {
 
 .outer-container {
   margin-top: 40px;
-  text-align: center;  /* Add this */
+  text-align: center;
 }
 
 .map-section, .chart-section {
-  /* Remove flex properties */
   width: 100%;
 }
 
@@ -68,12 +67,13 @@ button:hover {
 }
 
 .chart-description {
-  width: 990px; /* You can adjust this */
+  width: 990px;
   background-color: #0d66bab7;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  text-align: justify;
   height: 40px;
+  color: rgb(246, 246, 246);
 }
 
 #prices-anl {
@@ -93,15 +93,74 @@ button:hover {
 
 .chart2-content {
   display: flex;
-  align-items: flex-start; /* Aligns items to the top */
+  align-items: flex-start;
 }
 
 #bar_chart {
   flex: 0.5;
   height: 400px;
   margin-right: 10px; 
+  margin-bottom: -120px;
 }
 
 .chart2-description {
   flex: 5; 
+  text-align: justify;
+}
+
+.additional-charts {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#scatter_plot1, #scatter_plot2 {
+  flex: 1;
+  height: 400px;
+  margin: 0 10px;
+}
+
+.additional-description {
+  text-align: justify;
+}
+
+.map-description{
+  text-align: justify;
+}
+
+.additional-description ol {
+  list-style-type: decimal;
+  margin-bottom: 20px;
+}
+
+.additional-description ul {
+  list-style-type: disc;
+  margin-left: 40px;
+}
+
+.additional-description p, 
+.additional-description li {
+  text-align: justify;
+}
+
+.new-bottom-section {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.bottom-description {
+  width: 990px;
+  background-color: #0d66bab7;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+  height: 40px;
+}
+
+#bottom-text {
+  margin-top: 5px;
+  color: rgb(247, 247, 247);
 }
