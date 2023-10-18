@@ -1,0 +1,26 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/data/global_internet_prices.csv"},
+    "title": "Average Price of 1GB vs Most Expensive 1GB",
+    "width": 400,
+    "height": 300,
+    "mark": "circle",
+    "encoding": {
+      "x": {
+        "field": "Average price of 1GB (USD  at the start of 2021)",
+        "type": "quantitative",
+        "title": "Average Price of 1GB (USD)"
+      },
+      "y": {
+        "field": "Most expensive 1GB (USD)",
+        "type": "quantitative",
+        "title": "Most Expensive 1GB (USD)"
+      },
+      "tooltip": [
+        {"field": "Country", "type": "nominal"},
+        {"field": "Average price of 1GB (USD  at the start of 2021)", "type": "quantitative"},
+        {"field": "Most expensive 1GB (USD)", "type": "quantitative"}
+      ]
+    }
+  }
+  
