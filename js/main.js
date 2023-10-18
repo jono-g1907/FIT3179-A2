@@ -22,6 +22,7 @@ function updateYear(year) {
 }
 
 // Function to render the map
+// Function to render the map
 function renderMap() {
   let vegaLiteSpecFile = "";
 
@@ -34,32 +35,27 @@ function renderMap() {
   fetch(vegaLiteSpecFile)
     .then(response => response.json())
     .then(spec => {
-      // Add the checks here
-      if (spec && spec.layer) {
-        const usageLayer = spec.layer.find(layer => layer.data && layer.data.url === "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/data/internet_usage.csv");
-        if (usageLayer) {
-          const filterTransform = { "filter": `datum.Year === ${currentYear}` };
-          if (usageLayer.transform) {
-            usageLayer.transform.push(filterTransform);
-          } else {
-            usageLayer.transform = [filterTransform];
-          }
+      console.log("Fetched spec:", spec);  // Debugging line to inspect the fetched spec
+      
+      if (currentDataset === 'usage') {
+        const filterTransform = { "filter": `datum.Year === ${currentYear}` };
+        
+        if (spec.transform) {
+          spec.transform.push(filterTransform);
         } else {
-          console.error("Usage layer not found in spec");
+          spec.transform = [filterTransform];
         }
-      } else {
-        console.error("Either spec or spec.layer is undefined");
       }
 
-      // Get the dimensions of the container
+      // Existing code
       const container = document.getElementById('map');
       const width = container.offsetWidth;
       const height = container.offsetHeight;
 
       console.log("Final spec: ", spec);
-      // Embed the visualization, setting its size to match the container
-      vegaEmbed('#map', spec, { "width": width, "height": height});
-    });
+      vegaEmbed('#map', spec, { "width": width, "height": height });
+    })
+    .catch(error => console.error('Error fetching the spec:', error));  // Catch any fetch errors
 }
 
 // Initialize the map
