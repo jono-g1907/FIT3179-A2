@@ -38,8 +38,9 @@
                 "title": "Country"
             },
             {
-                "field": "Internet Users(%)", 
-                "type": "quantitative"
+                "field": "Year",
+                "type": "quantitative",
+                "title": "Year"            
             }
         ]
     }

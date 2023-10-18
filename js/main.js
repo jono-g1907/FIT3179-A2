@@ -34,7 +34,7 @@ function renderMap() {
   fetch(vegaLiteSpecFile)
     .then(response => response.json())
     .then(spec => {
-
+      console.log('Initial spec:', spec);
       console.log("Current Year: ", currentYear);
 
       if (currentDataset === 'usage') {
