@@ -26,9 +26,9 @@ function renderMap() {
   let vegaLiteSpecFile = "";
 
   if (currentDataset === 'prices') {
-    vegaLiteSpecFile = "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/js/prices_map.json";
+    vegaLiteSpecFile = "prices_map.json";
   } else {
-    vegaLiteSpecFile = "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/js/usage_map.json";
+    vegaLiteSpecFile = "usage_map.json";
   }
 
   fetch(vegaLiteSpecFile)
