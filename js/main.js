@@ -36,6 +36,8 @@ function renderMap() {
     .then(response => response.json())
     .then(spec => {
       const container = document.getElementById('map');
+      container.style.width = '600px';
+      container.style.height = '400px'
       const width = container.offsetWidth;
       const height = container.offsetHeight;
 
@@ -51,7 +53,7 @@ function loadNewChart() {
   fetch(vegaLiteSpecFile)
     .then(response => response.json())
     .then(spec => {
-      vegaEmbed('#newChart', spec)
+      vegaEmbed('#barChart', spec)
         .catch(error => console.error('Error embedding the new chart:', error));
     });
 }

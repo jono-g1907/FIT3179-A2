@@ -58,3 +58,50 @@ button {
 button:hover {
   background-color: #005bb5;
 }
+
+.new-chart-section {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.chart-description {
+  width: 990px; /* You can adjust this */
+  background-color: #0d66bab7;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 40px;
+}
+
+#prices-anl {
+  margin-top: 5px;
+}
+
+.chart2-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  width: 990px;
+}
+
+.chart2-content {
+  display: flex;
+  align-items: flex-start; /* Aligns items to the top */
+}
+
+#bar_chart {
+  flex: 0.5;
+  height: 400px;
+  margin-right: 10px; 
+}
+
+.chart2-description {
+  flex: 5; 
+}

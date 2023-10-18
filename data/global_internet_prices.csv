@@ -1,5 +1,4 @@
-S.NO,Country code,Country,Continental region,NO. OF Internet Plans,Price,Cheapest 1GB for 30 days (USD),Most expensive 1GB (USD),Average price of 1GB (USD  at the start of 2021),Average price of 1GB (USD – at start of 2020),Internet users,Population,"Avg 
-(Mbit/s)Ookla"
+S.NO,Country code,Country,Continental region,NO. OF Internet Plans,Price,Cheapest 1GB for 30 days (USD),Most expensive 1GB (USD),Average price of 1GB (USD  at the start of 2021),Average price of 1GB (USD – at start of 2020),Internet users,Population,Avg (Mbit/s)Ookla
 0,IL,Israel,NEAR EAST,27,0.05,0.02,20.95,0.11,0.9,"6,788,737","8,381,516",28.01
 1,KG,Kyrgyzstan,CIS (FORMER USSR),20,0.15,0.1,7.08,0.21,0.27,"2,309,235","6,304,030",16.3
 2,FJ,Fiji,OCEANIA,18,0.19,0.05,0.85,0.59,3.57,"452,479","883,483",25.99
