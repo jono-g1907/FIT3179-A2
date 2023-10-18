@@ -1,56 +1,27 @@
+// Variable to hold current dataset
 let currentDataset = 'prices';
-let currentYear = 1980;  // Initialize current year
 
-// Function to switch dataset
+// Function to switch dataset and re-render the map
 function switchDataset(dataset) {
   currentDataset = dataset;
-  const yearSliderDiv = document.getElementById('yearSliderDiv');
-  
-  if (currentDataset === 'usage') {
-    yearSliderDiv.style.display = 'block';
-  } else {
-    yearSliderDiv.style.display = 'none';
-  }
-  
   renderMap();
 }
 
-// Function to update year
-function updateYear(year) {
-  currentYear = year;
-  renderMap();
-}
-
-// Function to render the map
+// Function to render the map based on current dataset
 function renderMap() {
   let vegaLiteSpecFile = "";
 
+  // Determine which spec file to use based on current dataset
   if (currentDataset === 'prices') {
     vegaLiteSpecFile = "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/js/prices_map.json";
   } else {
     vegaLiteSpecFile = "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/js/usage_map.json";
   }
 
+  // Fetch and render the map
   fetch(vegaLiteSpecFile)
     .then(response => response.json())
     .then(spec => {
-      console.log('Initial spec:', spec);
-      console.log("Current Year: ", currentYear);
-
-      if (currentDataset === 'usage') {
-        const filterTransform = { 
-          "filter": `datum.Year === ${currentYear}`
-        };
-        console.log("Filter Transform: ", filterTransform);  // Debugging line
-
-        // Modify the 'from' part of the 'lookup' transform
-        if (spec.transform && spec.transform[0] && spec.transform[0].from) {
-          spec.transform[0].from.transform = [filterTransform];
-        }
-      }
-
-      console.log("Final spec: ", spec);
-
       const container = document.getElementById('map');
       const width = container.offsetWidth;
       const height = container.offsetHeight;
@@ -59,5 +30,6 @@ function renderMap() {
     })
     .catch(error => console.error('Error fetching the spec:', error));
 }
+
 // Initialize the map
 renderMap();
