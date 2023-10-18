@@ -26,10 +26,12 @@
         <button onclick="switchDataset('prices')" class="pure-button">Global Internet Prices</button>
         <button onclick="switchDataset('usage')" class="pure-button">Internet Usage</button>
 
-        <!-- Year Slider -->
-        <div id="yearSliderDiv" style="display:none;">
-            <input type="range" min="1980" max="2020" value="1980" id="yearSlider" oninput="updateYear(this.value)">
+        <!-- Year Slider for Internet Usage -->
+        <div id="yearSliderContainer" style="display:none;">
+            <input type="range" min="1980" max="2019" value="1980" id="yearSlider">
+            <label id="yearLabel">Year: 1980</label>
         </div>
+  
 
         <div class="pure-g">
             <div class=".pure-u-1-3">
