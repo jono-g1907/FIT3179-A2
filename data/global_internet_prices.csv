@@ -158,7 +158,7 @@ S.NO,Country code,Country,Continental region,NO. OF Internet Plans,Price,Cheapes
 156,MF,Saint-Martin (France),CARIBBEAN,40,3.46,0.59,106.49,3.32,8.46,0,,
 157,MQ,Martinique,CARIBBEAN,18,3.46,0.59,106.49,2.6,7.12,0,,
 158,LV,Latvia,BALTICS,22,3.49,0.29,70.87,3.79,18.12,"1,585,471","1,928,459",41.6
-159,CK,Cook Islands,OCEANIA,9,3.5,1.49,11.42,NO PACKAGES,5.56,0,,
+159,CK,Cook Islands,OCEANIA,9,3.5,1.49,11.42,0,5.56,0,,
 160,SK,Slovakia,EASTERN EUROPE,45,3.55,1.04,35.5,3.84,7.38,"4,446,926","5,453,014",33.44
 161,BJ,Benin,SUB-SAHARAN AFRICA,37,3.61,0.45,60.21,27.22,20.99,"1,578,008","11,485,044",
 162,MX,Mexico,CENTRAL AMERICA,45,3.62,1.2,12.06,4.77,15.05,"92,010,000","128,972,439",29.81
@@ -195,7 +195,7 @@ S.NO,Country code,Country,Continental region,NO. OF Internet Plans,Price,Cheapes
 193,GM,Gambia,SUB-SAHARAN AFRICA,31,5.86,2.37,97.71,5.1,6.89,"416,753","2,280,094",
 194,BS,Bahamas,CARIBBEAN,17,5.98,3.99,10.74,6.02,4.94,"336,057","385,637",26.77
 195,VU,Vanuatu,OCEANIA,23,6.06,0.75,28.23,4.25,NO PACKAGES,"71,050","292,680",
-196,TV,Tuvalu,OCEANIA,9,6.35,5.72,10.17,NO PACKAGES,12.42,"5,520","11,508",
+196,TV,Tuvalu,OCEANIA,9,6.35,5.72,10.17,0,12.42,"5,520","11,508",
 198,CW,Curaçao,CARIBBEAN,17,6.47,2.78,14.34,11.06,16.91,0,,
 199,NC,New Caledonia,OCEANIA,14,6.49,2.1,210.16,4.81,7.21,"226,557","279,993",
 200,BB,Barbados,CARIBBEAN,11,6.79,4.94,64.24,9.32,15.82,"233,604","286,641",
@@ -230,15 +230,15 @@ S.NO,Country code,Country,Continental region,NO. OF Internet Plans,Price,Cheapes
 230,SH,"Saint Helena, Ascension and Tristan da Cunha",SUB-SAHARAN AFRICA,4,39.87,38.57,51.42,52.5,6.04,"2,906","6,035",
 231,FK,Falkland Islands,SOUTH AMERICA,4,44.56,29.71,82.26,40.41,55.47,"2,881","3,234",
 232,GQ,Equatorial Guinea,SUB-SAHARAN AFRICA,4,49.67,45.16,63.22,12.78,47.39,"332,642","1,308,975",
-233,CW,Christmas Island,CARIBBEAN,,0,,,,,0,,
-234,ER,Eritrea,NORTHERN AFRICA,,0,,,,,"66,402","3,452,786",
-235,KP,North Korea,CARIBBEAN,,0,,,,,0,,
-236,MH,Marshall Islands,OCEANIA,,0,,,,,"20,560","58,413",
-237,PM,St. Pierre and Miquelon,CARIBBEAN,,0,,,,,0,,
-238,SS,South Sudan,SUB-SAHARAN AFRICA,,0,,,,,"1,003,542","10,975,927",
-239,VA,Vatican City (Holy See),Europe,,0,,,,,0,,
-240,VE,Venezuela,SOUTH AMERICA,,0,,,,,"20,564,451","28,887,118",5.68
-241,WF,Wallis and Futuna,OCEANIA,,0,,,,,"1,383","11,661",
-242,CD,Democratic Republic of the Congo,SUB-SAHARAN AFRICA,,0,,,,,"7,011,507","84,068,091",12.08
-243,ZW,Zimbabwe,SUB-SAHARAN AFRICA,,NaN,,,,,"4,472,992","14,438,802",13.99
-,,,,,,,,,,0,0,0
+233,CW,Christmas Island,CARIBBEAN,,0,,0,0,,0,,
+234,ER,Eritrea,NORTHERN AFRICA,,0,,0,0,,"66,402","3,452,786",
+235,KP,North Korea,CARIBBEAN,,0,,0,0,,0,,
+236,MH,Marshall Islands,OCEANIA,,0,,0,0,,"20,560","58,413",
+237,PM,St. Pierre and Miquelon,CARIBBEAN,,0,,0,0,,0,,
+238,SS,South Sudan,SUB-SAHARAN AFRICA,,0,,0,0,,"1,003,542","10,975,927",
+239,VA,Vatican City (Holy See),Europe,,0,,0,0,,0,,
+240,VE,Venezuela,SOUTH AMERICA,,0,,0,0,,"20,564,451","28,887,118",5.68
+241,WF,Wallis and Futuna,OCEANIA,,0,,0,0,,"1,383","11,661",
+242,CD,Democratic Republic of the Congo,SUB-SAHARAN AFRICA,,0,,0,0,,"7,011,507","84,068,091",12.08
+243,ZW,Zimbabwe,SUB-SAHARAN AFRICA,,NaN,,0,0,,"4,472,992","14,438,802",13.99
+,,,,,,,,,,,,
