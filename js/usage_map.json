@@ -40,11 +40,6 @@
             {
                 "field": "Internet Users(%)", 
                 "type": "quantitative"
-            },
-            {
-                "field": "Year",
-                "type": "ordinal",
-                "title": "Year"
             }
         ]
     }
