@@ -34,15 +34,21 @@ function renderMap() {
   fetch(vegaLiteSpecFile)
     .then(response => response.json())
     .then(spec => {
-      if (currentDataset === 'usage') {
-        const usageLayer = spec.layer.find(layer => layer.data.url === "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/data/internet%20usage.csv");
-        const filterTransform = { "filter": `datum.Year === ${currentYear}` };
-        
-        if (usageLayer.transform) {
-          usageLayer.transform.push(filterTransform);
+      // Add the checks here
+      if (spec && spec.layer) {
+        const usageLayer = spec.layer.find(layer => layer.data && layer.data.url === "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/data/internet_usage.csv");
+        if (usageLayer) {
+          const filterTransform = { "filter": `datum.Year === ${currentYear}` };
+          if (usageLayer.transform) {
+            usageLayer.transform.push(filterTransform);
+          } else {
+            usageLayer.transform = [filterTransform];
+          }
         } else {
-          usageLayer.transform = [filterTransform];
+          console.error("Usage layer not found in spec");
         }
+      } else {
+        console.error("Either spec or spec.layer is undefined");
       }
 
       // Get the dimensions of the container
