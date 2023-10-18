@@ -18,7 +18,7 @@
                 "url": "https://raw.githubusercontent.com/jono-g1907/FIT3179-A2/main/data/internet_usage.csv"
             },
             "key": "Entity",
-            "fields": ["Internet Users(%)"]
+            "fields": ["Internet Users(%)", "Year"]
         }
         }
     ],
@@ -38,9 +38,13 @@
                 "title": "Country"
             },
             {
+                "field": "Internet Users(%)", 
+                "type": "quantitative"
+            },
+            {
                 "field": "Year",
                 "type": "quantitative",
-                "title": "Year"            
+                "title": "Year"
             }
         ]
     }
